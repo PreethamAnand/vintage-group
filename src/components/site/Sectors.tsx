@@ -33,11 +33,12 @@ export const Sectors = () => {
     <section id="solutions" className="relative py-24 md:py-32 bg-gradient-subtle">
       <div className="container-px mx-auto max-w-7xl">
         <div className="max-w-2xl reveal">
-          <p className="text-xs font-medium tracking-[0.2em] uppercase text-accent">Our Sectors</p>
-          <h2 className="mt-4 text-3xl md:text-5xl font-semibold text-balance leading-[1.1]">
-            Five disciplines, <em className="italic font-normal text-primary">one integrated vision.</em>
+          <p className="text-[11px] font-bold tracking-[0.28em] uppercase text-accent">Our Sectors</p>
+          <h2 className="mt-4 font-display text-4xl md:text-5xl font-bold text-primary text-balance leading-[1.1]">
+            Five disciplines, <em className="italic font-medium">one integrated vision.</em>
           </h2>
-          <p className="mt-5 text-muted-foreground text-base md:text-lg leading-relaxed">
+          <div className="mt-5 h-[3px] w-20 bg-accent" />
+          <p className="mt-6 text-muted-foreground text-base md:text-lg leading-relaxed">
             We operate at the intersection of tradition and technology — building scalable solutions that
             move industries and communities forward.
           </p>
@@ -49,18 +50,18 @@ export const Sectors = () => {
             return (
               <article
                 key={s.title}
-                className="reveal group relative bg-card border border-border rounded-xl p-8 shadow-card hover:shadow-elevated hover:-translate-y-1 hover:border-primary/30 transition-all duration-500 ease-smooth overflow-hidden"
+                className="reveal group relative bg-card border border-border rounded-2xl p-8 shadow-card hover:shadow-elevated hover:-translate-y-1 hover:border-accent/60 transition-all duration-500 ease-smooth overflow-hidden"
                 style={{ transitionDelay: `${i * 60}ms` }}
               >
-                <div className="absolute -top-20 -right-20 size-40 rounded-full bg-primary/5 group-hover:bg-primary/10 transition-colors duration-700" />
+                <div className="absolute -top-24 -right-24 size-48 rounded-full bg-accent/10 group-hover:bg-accent/15 transition-colors duration-700" />
                 <div className="relative">
-                  <div className="inline-flex items-center justify-center size-12 rounded-lg bg-primary/8 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-500">
+                  <div className="inline-flex items-center justify-center size-14 rounded-full border-2 border-accent text-accent group-hover:bg-accent group-hover:text-accent-foreground transition-colors duration-500">
                     <Icon size={22} strokeWidth={1.6} />
                   </div>
-                  <h3 className="mt-6 text-xl font-semibold tracking-tight">{s.title}</h3>
+                  <h3 className="mt-6 font-display text-2xl font-bold tracking-tight text-primary">{s.title}</h3>
                   <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{s.desc}</p>
-                  <a href="#contact" className="mt-6 inline-flex items-center gap-1.5 text-sm font-medium text-primary group-hover:gap-2.5 transition-all duration-300">
-                    Learn more <ArrowUpRight size={15} />
+                  <a href="#contact" className="mt-6 inline-flex items-center gap-1.5 text-[11px] font-bold tracking-[0.2em] text-primary group-hover:gap-2.5 group-hover:text-accent transition-all duration-300">
+                    LEARN MORE <ArrowUpRight size={14} />
                   </a>
                 </div>
               </article>

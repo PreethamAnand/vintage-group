@@ -12,7 +12,7 @@ const Index = () => {
   useReveal();
 
   useEffect(() => {
-    document.title = "Verdara — Integrated Solutions for Sustainable Growth";
+    document.title = "Vintage — Absolutely Pure | Rooted in Nature, Committed to Purity";
     const setMeta = (name: string, content: string) => {
       let m = document.querySelector(`meta[name="${name}"]`);
       if (!m) {
@@ -24,7 +24,7 @@ const Index = () => {
     };
     setMeta(
       "description",
-      "Verdara delivers integrated, technology-driven solutions across agriculture, agrotech, infrastructure, green energy, and dairy."
+      "Vintage delivers pure, natural and sustainable solutions across agriculture, agrotech, infrastructure, green energy, and dairy."
     );
   }, []);
 

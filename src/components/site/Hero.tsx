@@ -1,57 +1,76 @@
-import { ArrowRight } from "lucide-react";
+import { Leaf, Sprout, Milk, HandHeart, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import heroImg from "@/assets/hero.jpg";
 
+const FEATURES = [
+  { icon: Leaf, title: "NATURAL", desc: "Pure and natural products" },
+  { icon: Sprout, title: "SUSTAINABLE", desc: "Sustainable farming and practices" },
+  { icon: Milk, title: "QUALITY", desc: "Premium quality you can trust" },
+  { icon: HandHeart, title: "ETHICAL", desc: "Ethical, responsible and transparent" },
+  { icon: Users, title: "COMMUNITY", desc: "Supporting farmers, strengthening communities" },
+];
+
 export const Hero = () => {
   return (
-    <section id="home" className="relative min-h-[100svh] flex items-center overflow-hidden">
-      <img
-        src={heroImg}
-        alt="Aerial view of sustainable farmland with wind turbines"
-        width={1920}
-        height={1280}
-        className="absolute inset-0 h-full w-full object-cover"
-      />
-      <div className="absolute inset-0 bg-gradient-hero" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,_hsl(var(--primary)/0.6)_0%,_transparent_60%)]" />
+    <section id="home" className="relative bg-background overflow-hidden">
+      {/* Hero scene */}
+      <div className="relative min-h-[92svh] flex items-center">
+        <img
+          src={heroImg}
+          alt="Vintage farm at sunset with green barn, golden sun, cow and chickens"
+          width={1920}
+          height={1080}
+          className="absolute inset-0 h-full w-full object-cover"
+        />
+        {/* soft cream wash on the left for text legibility */}
+        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/85 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-hero" />
 
-      {/* subtle grid lines */}
-      <svg className="absolute inset-0 h-full w-full opacity-[0.07]" aria-hidden>
-        <defs>
-          <pattern id="grid" width="64" height="64" patternUnits="userSpaceOnUse">
-            <path d="M 64 0 L 0 0 0 64" fill="none" stroke="currentColor" strokeWidth="0.5" className="text-primary-foreground" />
-          </pattern>
-        </defs>
-        <rect width="100%" height="100%" fill="url(#grid)" />
-      </svg>
-
-      <div className="container-px mx-auto max-w-7xl relative z-10 pt-28 pb-20">
-        <div className="max-w-3xl">
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-primary-foreground/20 bg-primary-foreground/5 backdrop-blur-md text-primary-foreground/90 text-xs font-medium tracking-wide animate-fade-in">
-            <span className="size-1.5 rounded-full bg-accent" />
-            Sustainable. Integrated. Future-Ready.
-          </div>
-          <h1 className="mt-6 text-primary-foreground text-balance text-4xl md:text-6xl lg:text-7xl font-semibold leading-[1.05] animate-fade-in-slow">
-            Integrated Solutions <br className="hidden md:block" />
-            for <em className="italic font-normal text-primary-foreground/95">Sustainable Growth</em>
-          </h1>
-          <p className="mt-6 max-w-xl text-primary-foreground/85 text-base md:text-lg leading-relaxed animate-fade-in-slow [animation-delay:120ms]">
-            Delivering innovation across agriculture, infrastructure, energy, and dairy ecosystems through
-            technology-driven solutions that build a resilient tomorrow.
-          </p>
-          <div className="mt-10 flex flex-wrap items-center gap-4 animate-fade-in-slow [animation-delay:240ms]">
-            <Button asChild size="lg" variant="hero">
-              <a href="#solutions">Explore Solutions <ArrowRight /></a>
-            </Button>
-            <Button asChild size="lg" variant="heroOutline">
-              <a href="#contact">Contact Us</a>
-            </Button>
+        <div className="container-px mx-auto max-w-7xl relative z-10 pt-32 pb-24">
+          <div className="max-w-2xl">
+            <h1 className="font-display text-primary text-balance text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.05] animate-fade-in-slow">
+              Rooted in Nature,<br />
+              Committed to Purity.
+            </h1>
+            <div className="mt-6 h-[3px] w-24 bg-accent animate-fade-in-slow [animation-delay:120ms]" />
+            <p className="mt-7 max-w-md text-primary/80 text-base md:text-lg leading-relaxed animate-fade-in-slow [animation-delay:200ms]">
+              From our farms to your homes, we bring you pure, natural and sustainable goodness you can trust.
+            </p>
+            <div className="mt-10 animate-fade-in-slow [animation-delay:320ms]">
+              <Button asChild size="lg" variant="default" className="px-8 tracking-[0.18em] text-[12px] font-semibold">
+                <a href="#solutions">EXPLORE MORE</a>
+              </Button>
+            </div>
           </div>
         </div>
       </div>
 
-      {/* bottom fade */}
-      <div className="absolute bottom-0 inset-x-0 h-32 bg-gradient-to-b from-transparent to-background" />
+      {/* Feature strip */}
+      <div className="relative bg-primary text-primary-foreground">
+        <div className="container-px mx-auto max-w-7xl py-10 md:py-12">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-y-10 gap-x-6 divide-x divide-accent/30">
+            {FEATURES.map((f, i) => {
+              const Icon = f.icon;
+              return (
+                <div
+                  key={f.title}
+                  className={`flex flex-col items-center text-center px-4 ${i === 0 ? "border-l-0" : ""}`}
+                >
+                  <div className="size-12 rounded-full border-2 border-accent flex items-center justify-center text-accent">
+                    <Icon size={20} strokeWidth={1.8} />
+                  </div>
+                  <h3 className="mt-4 text-accent font-display text-[15px] font-bold tracking-[0.22em]">
+                    {f.title}
+                  </h3>
+                  <p className="mt-2 text-xs md:text-sm text-primary-foreground/85 leading-relaxed max-w-[160px]">
+                    {f.desc}
+                  </p>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </div>
     </section>
   );
 };

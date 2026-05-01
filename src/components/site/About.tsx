@@ -8,16 +8,17 @@ const PILLARS = [
 
 export const About = () => {
   return (
-    <section id="about" className="py-24 md:py-32 bg-secondary/40">
+    <section id="about" className="py-24 md:py-32 bg-secondary/50">
       <div className="container-px mx-auto max-w-7xl">
         <div className="grid lg:grid-cols-12 gap-12 lg:gap-20 items-center">
           <div className="lg:col-span-6 reveal">
-            <p className="text-xs font-medium tracking-[0.2em] uppercase text-accent">About Verdara</p>
-            <h2 className="mt-4 text-3xl md:text-5xl font-semibold leading-[1.1] text-balance">
-              A multi-sector group, unified by <em className="italic font-normal text-primary">purpose.</em>
+            <p className="text-[11px] font-bold tracking-[0.28em] uppercase text-accent">About Vintage</p>
+            <h2 className="mt-4 font-display text-4xl md:text-5xl font-bold text-primary leading-[1.1] text-balance">
+              A multi-sector group, unified by <em className="italic font-medium">purpose.</em>
             </h2>
+            <div className="mt-5 h-[3px] w-20 bg-accent" />
             <p className="mt-6 text-muted-foreground text-base md:text-lg leading-relaxed">
-              Verdara brings together engineers, agronomists, technologists, and operators to deliver integrated
+              Vintage brings together engineers, agronomists, technologists, and operators to deliver integrated
               solutions across the industries that feed, power, and build modern economies.
             </p>
             <p className="mt-4 text-muted-foreground text-base leading-relaxed">
@@ -37,19 +38,19 @@ export const About = () => {
 
           <div className="lg:col-span-6 reveal">
             <div className="grid grid-cols-2 gap-4">
-              <div className="bg-card border border-border rounded-xl p-6 shadow-card">
-                <div className="text-xs font-medium uppercase tracking-wider text-muted-foreground">Mission</div>
-                <p className="mt-3 text-[15px] leading-relaxed">Engineer integrated, sustainable systems that elevate communities and economies.</p>
+              <div className="bg-card border border-border rounded-2xl p-7 shadow-card">
+                <div className="text-[11px] font-bold uppercase tracking-[0.22em] text-accent">Mission</div>
+                <p className="mt-3 font-display text-lg leading-snug text-primary">Engineer integrated, sustainable systems that elevate communities and economies.</p>
               </div>
-              <div className="bg-primary text-primary-foreground rounded-xl p-6 shadow-elevated">
-                <div className="text-xs font-medium uppercase tracking-wider text-primary-foreground/70">Vision</div>
-                <p className="mt-3 text-[15px] leading-relaxed">A future where growth and stewardship are inseparable.</p>
+              <div className="bg-primary text-primary-foreground rounded-2xl p-7 shadow-elevated">
+                <div className="text-[11px] font-bold uppercase tracking-[0.22em] text-accent">Vision</div>
+                <p className="mt-3 font-display text-lg leading-snug">A future where growth and stewardship are inseparable.</p>
               </div>
-              <div className="col-span-2 bg-card border border-border rounded-xl p-6 shadow-card">
-                <div className="text-xs font-medium uppercase tracking-wider text-muted-foreground mb-5">Trusted Across the Ecosystem</div>
+              <div className="col-span-2 bg-card border border-border rounded-2xl p-7 shadow-card">
+                <div className="text-[11px] font-bold uppercase tracking-[0.22em] text-accent mb-5">Trusted Across the Ecosystem</div>
                 <div className="grid grid-cols-4 gap-6 items-center">
                   {["AGRIO", "TERRA", "NOVUS", "HELIO"].map((b) => (
-                    <div key={b} className="font-display text-foreground/40 hover:text-foreground/70 transition-colors text-center text-sm font-semibold tracking-[0.15em]">
+                    <div key={b} className="font-display text-primary/40 hover:text-primary/80 transition-colors text-center text-sm font-bold tracking-[0.18em]">
                       {b}
                     </div>
                   ))}

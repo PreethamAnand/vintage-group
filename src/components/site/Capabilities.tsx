@@ -11,15 +11,16 @@ const ITEMS = [
 
 export const Capabilities = () => {
   return (
-    <section className="py-24 md:py-32 bg-charcoal text-charcoal-foreground relative overflow-hidden">
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_hsl(var(--accent)/0.18),_transparent_55%)]" />
+    <section id="impact" className="py-24 md:py-32 bg-charcoal text-charcoal-foreground relative overflow-hidden">
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_hsl(var(--accent)/0.22),_transparent_55%)]" />
       <div className="container-px mx-auto max-w-7xl relative">
         <div className="grid lg:grid-cols-12 gap-10 lg:gap-16 items-end">
           <div className="lg:col-span-5 reveal">
-            <p className="text-xs font-medium tracking-[0.2em] uppercase text-accent">Capabilities</p>
-            <h2 className="mt-4 text-3xl md:text-5xl font-semibold leading-[1.1] text-balance">
-              Built to deliver — <span className="text-charcoal-foreground/70 italic font-normal">across every layer.</span>
+            <p className="text-[11px] font-bold tracking-[0.28em] uppercase text-accent">Capabilities</p>
+            <h2 className="mt-4 font-display text-4xl md:text-5xl font-bold leading-[1.1] text-balance">
+              Built to deliver — <span className="text-charcoal-foreground/70 italic font-medium">across every layer.</span>
             </h2>
+            <div className="mt-5 h-[3px] w-20 bg-accent" />
           </div>
           <p className="lg:col-span-6 lg:col-start-7 text-charcoal-foreground/70 text-base md:text-lg leading-relaxed reveal">
             Our capabilities span strategy, engineering, technology, and operations — enabling integrated outcomes
