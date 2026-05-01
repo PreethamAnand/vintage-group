@@ -1,16 +1,44 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { useEffect } from "react";
+import { Header } from "@/components/site/Header";
+import { Hero } from "@/components/site/Hero";
+import { Sectors } from "@/components/site/Sectors";
+import { Capabilities } from "@/components/site/Capabilities";
+import { Metrics } from "@/components/site/Metrics";
+import { About } from "@/components/site/About";
+import { Footer } from "@/components/site/Footer";
+import { useReveal } from "@/hooks/useReveal";
 
-// IMPORTANT: Fully REPLACE this with your own code
-const PlaceholderIndex = () => {
-  // PLACEHOLDER: Replace this entire return statement with the user's app.
-  // The inline background color is intentionally not part of the design system.
+const Index = () => {
+  useReveal();
+
+  useEffect(() => {
+    document.title = "Verdara — Integrated Solutions for Sustainable Growth";
+    const setMeta = (name: string, content: string) => {
+      let m = document.querySelector(`meta[name="${name}"]`);
+      if (!m) {
+        m = document.createElement("meta");
+        m.setAttribute("name", name);
+        document.head.appendChild(m);
+      }
+      m.setAttribute("content", content);
+    };
+    setMeta(
+      "description",
+      "Verdara delivers integrated, technology-driven solutions across agriculture, agrotech, infrastructure, green energy, and dairy."
+    );
+  }, []);
+
   return (
-    <div className="flex min-h-screen items-center justify-center" style={{ backgroundColor: '#fcfbf8' }}>
-      <img data-lovable-blank-page-placeholder="REMOVE_THIS" src="/placeholder.svg" alt="Your app will live here!" />
-    </div>
+    <main>
+      <Header />
+      <Hero />
+      <Sectors />
+      <Capabilities />
+      <Metrics />
+      <About />
+      <Footer />
+    </main>
   );
 };
-
-const Index = PlaceholderIndex;
 
 export default Index;
