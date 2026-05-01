@@ -16,7 +16,7 @@ export const Footer = () => {
       <div className="container-px mx-auto max-w-7xl pt-20 pb-16 border-b border-charcoal-foreground/10">
         <div className="grid lg:grid-cols-12 gap-10 lg:gap-16">
           <div className="lg:col-span-6 reveal">
-            <h3 className="font-display text-3xl md:text-4xl font-semibold leading-tight text-balance">
+            <h3 className="font-display text-3xl md:text-4xl font-bold leading-tight text-balance">
               Let's build something <em className="italic font-normal text-accent">enduring.</em>
             </h3>
             <p className="mt-4 text-charcoal-foreground/65 max-w-md leading-relaxed">
@@ -35,8 +35,8 @@ export const Footer = () => {
             </form>
           </div>
 
-          <div className="lg:col-span-6 reveal">
-            <div className="text-xs font-medium tracking-[0.2em] uppercase text-accent">Latest Insights</div>
+          <div id="insights" className="lg:col-span-6 reveal">
+            <div className="text-[11px] font-bold tracking-[0.28em] uppercase text-accent">Latest Insights</div>
             <ul className="mt-5 divide-y divide-charcoal-foreground/10">
               {INSIGHTS.map((i) => (
                 <li key={i.title}>
@@ -56,9 +56,9 @@ export const Footer = () => {
       <div className="container-px mx-auto max-w-7xl py-16">
         <div className="grid lg:grid-cols-12 gap-10">
           <div className="lg:col-span-5">
-            <Logo />
+            <Logo variant="light" />
             <p className="mt-5 text-charcoal-foreground/65 text-sm leading-relaxed max-w-sm">
-              An integrated solutions group operating across agriculture, agrotech, infrastructure, green energy,
+              Vintage is an integrated solutions group operating across agriculture, agrotech, infrastructure, green energy,
               and dairy — building sustainable ecosystems for future generations.
             </p>
             <div className="mt-6 flex items-center gap-2">
@@ -77,16 +77,16 @@ export const Footer = () => {
 
           <div className="lg:col-span-3 grid grid-cols-2 gap-8">
             <div>
-              <div className="text-xs font-medium uppercase tracking-widest text-charcoal-foreground/50">Navigate</div>
+              <div className="text-[11px] font-bold uppercase tracking-[0.22em] text-accent">Navigate</div>
               <ul className="mt-4 space-y-2.5 text-sm text-charcoal-foreground/75">
                 <li><a href="#home" className="hover:text-accent transition-colors">Home</a></li>
-                <li><a href="#solutions" className="hover:text-accent transition-colors">Solutions</a></li>
+                <li><a href="#solutions" className="hover:text-accent transition-colors">Sectors</a></li>
                 <li><a href="#about" className="hover:text-accent transition-colors">About</a></li>
                 <li><a href="#contact" className="hover:text-accent transition-colors">Contact</a></li>
               </ul>
             </div>
             <div>
-              <div className="text-xs font-medium uppercase tracking-widest text-charcoal-foreground/50">Sectors</div>
+              <div className="text-[11px] font-bold uppercase tracking-[0.22em] text-accent">Sectors</div>
               <ul className="mt-4 space-y-2.5 text-sm text-charcoal-foreground/75">
                 <li>Agriculture</li>
                 <li>Agrotech</li>
@@ -98,20 +98,20 @@ export const Footer = () => {
           </div>
 
           <div className="lg:col-span-4">
-            <div className="text-xs font-medium uppercase tracking-widest text-charcoal-foreground/50">Contact</div>
+            <div className="text-[11px] font-bold uppercase tracking-[0.22em] text-accent">Contact</div>
             <ul className="mt-4 space-y-3 text-sm text-charcoal-foreground/75">
               <li className="flex items-start gap-3"><MapPin size={15} className="mt-0.5 text-accent shrink-0" /> Innovation Park, Sector 21, Bengaluru, India</li>
-              <li className="flex items-center gap-3"><Mail size={15} className="text-accent shrink-0" /> hello@verdara.co</li>
+              <li className="flex items-center gap-3"><Mail size={15} className="text-accent shrink-0" /> hello@vintage.co</li>
               <li className="flex items-center gap-3"><Phone size={15} className="text-accent shrink-0" /> +91 80 4000 1200</li>
             </ul>
           </div>
         </div>
 
         <div className="mt-14 pt-6 border-t border-charcoal-foreground/10 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
-          <p className="text-sm text-charcoal-foreground/55 italic">
+          <p className="font-display text-sm text-charcoal-foreground/70 italic">
             Committed to building sustainable ecosystems for future generations.
           </p>
-          <p className="text-xs text-charcoal-foreground/45">© {new Date().getFullYear()} Verdara Group. All rights reserved.</p>
+          <p className="text-xs text-charcoal-foreground/45">© {new Date().getFullYear()} Vintage Group. All rights reserved.</p>
         </div>
       </div>
     </footer>
