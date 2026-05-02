@@ -22,17 +22,19 @@ export const Hero = () => {
           height={1080}
           className="absolute inset-0 h-full w-full object-cover"
         />
-        {/* soft cream wash on the left for text legibility */}
-        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/70 to-transparent" />
+        {/* soft cream wash on the left for text legibility, fully transparent on the right */}
+        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/85 via-30% to-transparent to-55%" />
+        {/* subtle top fade so header blends into sky */}
+        <div className="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-background/80 to-transparent" />
 
-        <div className="container-px mx-auto max-w-7xl relative z-10 pt-32 pb-40">
-          <div className="max-w-2xl">
-            <h1 className="font-display text-primary text-balance text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.05] animate-fade-in-slow">
+        <div className="container-px mx-auto max-w-7xl relative z-10 pt-32 pb-48 md:pb-56">
+          <div className="max-w-xl">
+            <h1 className="font-display text-primary text-balance text-5xl md:text-6xl lg:text-[64px] font-bold leading-[1.05] tracking-tight animate-fade-in-slow">
               Rooted in Nature,<br />
               Committed to Purity.
             </h1>
             <div className="mt-6 h-[3px] w-24 bg-accent animate-fade-in-slow [animation-delay:120ms]" />
-            <p className="mt-7 max-w-md text-primary/80 text-base md:text-lg leading-relaxed animate-fade-in-slow [animation-delay:200ms]">
+            <p className="mt-7 max-w-sm text-primary/80 text-base md:text-[17px] leading-relaxed animate-fade-in-slow [animation-delay:200ms]">
               From our farms to your homes, we bring you pure, natural and sustainable goodness you can trust.
             </p>
             <div className="mt-10 animate-fade-in-slow [animation-delay:320ms]">
