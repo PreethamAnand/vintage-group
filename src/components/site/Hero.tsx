@@ -14,7 +14,7 @@ export const Hero = () => {
   return (
     <section id="home" className="relative bg-background overflow-hidden">
       {/* Hero scene */}
-      <div className="relative min-h-[92svh] flex items-center">
+      <div className="relative min-h-[100svh] flex items-center">
         <img
           src={heroImg}
           alt="Vintage farm at sunset with green barn, golden sun, cow and chickens"
@@ -23,10 +23,9 @@ export const Hero = () => {
           className="absolute inset-0 h-full w-full object-cover"
         />
         {/* soft cream wash on the left for text legibility */}
-        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/85 to-transparent" />
-        <div className="absolute inset-0 bg-gradient-hero" />
+        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/70 to-transparent" />
 
-        <div className="container-px mx-auto max-w-7xl relative z-10 pt-32 pb-24">
+        <div className="container-px mx-auto max-w-7xl relative z-10 pt-32 pb-40">
           <div className="max-w-2xl">
             <h1 className="font-display text-primary text-balance text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.05] animate-fade-in-slow">
               Rooted in Nature,<br />
@@ -43,11 +42,10 @@ export const Hero = () => {
             </div>
           </div>
         </div>
-      </div>
 
-      {/* Feature strip */}
-      <div className="relative bg-primary text-primary-foreground">
-        <div className="container-px mx-auto max-w-7xl py-10 md:py-12">
+        {/* Feature strip overlapping bottom of hero */}
+        <div className="absolute bottom-0 inset-x-0 bg-primary text-primary-foreground z-10">
+          <div className="container-px mx-auto max-w-7xl py-8 md:py-10">
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-y-10 gap-x-6 divide-x divide-accent/30">
             {FEATURES.map((f, i) => {
               const Icon = f.icon;
@@ -68,6 +66,7 @@ export const Hero = () => {
                 </div>
               );
             })}
+          </div>
           </div>
         </div>
       </div>
