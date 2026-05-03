@@ -101,8 +101,8 @@ export const Footer = () => {
             <div className="text-[11px] font-bold uppercase tracking-[0.22em] text-accent">Contact</div>
             <ul className="mt-4 space-y-3 text-sm text-charcoal-foreground/75">
               <li className="flex items-start gap-3"><MapPin size={15} className="mt-0.5 text-accent shrink-0" /> Innovation Park, Sector 21, Bengaluru, India</li>
-              <li className="flex items-center gap-3"><Mail size={15} className="text-accent shrink-0" /> hello@vintage.co</li>
-              <li className="flex items-center gap-3"><Phone size={15} className="text-accent shrink-0" /> +91 80 4000 1200</li>
+              <li className="flex items-center gap-3"><Mail size={15} className="text-accent shrink-0" /> vintagegroup.bharat@gmail.com</li>
+              <li className="flex items-center gap-3"><Phone size={15} className="text-accent shrink-0" /> +91 7780701929</li>
             </ul>
           </div>
         </div>
