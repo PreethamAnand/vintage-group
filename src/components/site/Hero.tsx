@@ -22,12 +22,7 @@ export const Hero = () => {
           height={1080}
           className="absolute inset-0 h-full w-full object-cover"
         />
-        {/* soft cream wash on the left for text legibility, fully transparent on the right */}
-        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/85 via-30% to-transparent to-55%" />
-        {/* subtle top fade so header blends into sky */}
-        <div className="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-background/80 to-transparent" />
-
-        <div className="container-px mx-auto max-w-7xl relative z-10 pt-32 pb-48 md:pb-56">
+        <div className="container-px mx-auto max-w-7xl relative z-10 pt-32 pb-40 md:pb-44">
           <div className="max-w-xl">
             <h1 className="font-display text-primary text-balance text-5xl md:text-6xl lg:text-[64px] font-bold leading-[1.05] tracking-tight animate-fade-in-slow">
               Rooted in Nature,<br />
@@ -47,22 +42,22 @@ export const Hero = () => {
 
         {/* Feature strip overlapping bottom of hero */}
         <div className="absolute bottom-0 inset-x-0 bg-primary text-primary-foreground z-10">
-          <div className="container-px mx-auto max-w-7xl py-8 md:py-10">
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-y-10 gap-x-6 divide-x divide-accent/30">
+          <div className="container-px mx-auto max-w-7xl py-5 md:py-6">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-y-6 gap-x-4 divide-x divide-accent/30">
             {FEATURES.map((f, i) => {
               const Icon = f.icon;
               return (
                 <div
                   key={f.title}
-                  className={`flex flex-col items-center text-center px-4 ${i === 0 ? "border-l-0" : ""}`}
+                  className={`flex flex-col items-center text-center px-3 ${i === 0 ? "border-l-0" : ""}`}
                 >
-                  <div className="size-12 rounded-full border-2 border-accent flex items-center justify-center text-accent">
-                    <Icon size={20} strokeWidth={1.8} />
+                  <div className="size-9 rounded-full border-2 border-accent flex items-center justify-center text-accent">
+                    <Icon size={16} strokeWidth={1.8} />
                   </div>
-                  <h3 className="mt-4 text-accent font-display text-[15px] font-bold tracking-[0.22em]">
+                  <h3 className="mt-2 text-accent font-display text-[12px] font-bold tracking-[0.22em]">
                     {f.title}
                   </h3>
-                  <p className="mt-2 text-xs md:text-sm text-primary-foreground/85 leading-relaxed max-w-[160px]">
+                  <p className="mt-1 text-[11px] text-primary-foreground/85 leading-snug max-w-[160px]">
                     {f.desc}
                   </p>
                 </div>
