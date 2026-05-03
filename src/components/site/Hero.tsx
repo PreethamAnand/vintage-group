@@ -20,9 +20,9 @@ export const Hero = () => {
           alt="Vintage farm at sunset with green barn, golden sun, cow and chickens"
           width={1920}
           height={1080}
-          className="absolute inset-0 h-full w-full object-cover"
+          className="absolute inset-0 h-full w-full object-cover object-right"
         />
-        <div className="container-px mx-auto max-w-7xl relative z-10 pt-32 pb-40 md:pb-44">
+        <div className="relative z-10 w-full pt-32 pb-40 md:pb-44 pl-6 md:pl-12 lg:pl-20">
           <div className="max-w-xl">
             <h1 className="font-display text-primary text-balance text-5xl md:text-6xl lg:text-[64px] font-bold leading-[1.05] tracking-tight animate-fade-in-slow">
               Rooted in Nature,<br />
