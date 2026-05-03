@@ -14,13 +14,13 @@ export const Hero = () => {
   return (
     <section id="home" className="relative bg-background overflow-hidden">
       {/* Hero scene */}
-      <div className="relative min-h-[100svh] flex items-center bg-[hsl(var(--primary))]">
+      <div className="relative min-h-[100svh] flex items-center">
         <img
           src={heroImg}
           alt="Vintage farm at sunset with green barn, golden sun, cow and chickens"
           width={1920}
           height={1080}
-          className="absolute inset-0 h-full w-full object-contain object-top md:object-cover md:object-right"
+          className="absolute inset-0 h-full w-full object-cover object-[70%_center] md:object-right"
         />
         <div className="relative z-10 w-full pt-28 md:pt-32 pb-[420px] sm:pb-72 md:pb-44 px-6 md:pl-12 lg:pl-20">
           <div className="max-w-xl">
