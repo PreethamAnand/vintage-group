@@ -102,7 +102,7 @@ export const Footer = () => {
             <ul className="mt-4 space-y-3 text-sm text-charcoal-foreground/75">
               <li className="flex items-start gap-3"><MapPin size={15} className="mt-0.5 text-accent shrink-0" /> Innovation Park, Sector 21, Bengaluru, India</li>
               <li className="flex items-center gap-3"><Mail size={15} className="text-accent shrink-0" /> vintagegroup.bharat@gmail.com</li>
-              <li className="flex items-center gap-3"><Phone size={15} className="text-accent shrink-0" /> +91 7780701929</li>
+              <li className="flex items-center gap-3"><Phone size={15} className="text-accent shrink-0" /> +91 8121078989</li>
             </ul>
           </div>
         </div>
@@ -111,7 +111,7 @@ export const Footer = () => {
           <p className="font-display text-sm text-charcoal-foreground/70 italic">
             Committed to building sustainable ecosystems for future generations.
           </p>
-          <p className="text-xs text-charcoal-foreground/45">© {new Date().getFullYear()} Vintage Group. All rights reserved.</p>
+          <p className="text-xs text-charcoal-foreground/45">© {new Date().getFullYear()} Vintage Group. All rights reserved.<b>PREETHAM ANAND</b></p>
         </div>
       </div>
     </footer>
