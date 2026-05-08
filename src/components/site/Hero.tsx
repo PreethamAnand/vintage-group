@@ -21,8 +21,8 @@ export const Hero = () => {
             alt="Vintage farm at sunset with green barn, golden sun, cow and chickens"
             className="absolute inset-0 w-full h-full object-cover object-[80%_center]"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-background via-background/85 to-background/10" />
-          <div className="relative pt-28 pb-[360px] px-6 text-center">
+          <div className="absolute inset-0 bg-gradient-to-b from-background/85 via-background/40 to-background/10" />
+          <div className="relative pt-28 pb-12 px-6 text-center min-h-[760px] flex flex-col justify-start">
             <h1 className="font-display text-primary text-balance text-[40px] font-bold leading-[1.05] tracking-tight animate-fade-in-slow">
               Rooted in Nature,<br />
               Committed to Purity.
