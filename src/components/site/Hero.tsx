@@ -33,7 +33,7 @@ export const Hero = () => {
         <img
           src={heroImg}
           alt="Vintage farm at sunset with green barn, golden sun, cow and chickens"
-          className="w-full h-auto object-cover"
+          className="w-full h-[460px] object-cover object-center scale-110"
         />
         <div className="bg-primary text-primary-foreground">
           <div className="px-6 py-8">
