@@ -15,26 +15,29 @@ export const Hero = () => {
     <section id="home" className="relative bg-background overflow-hidden">
       {/* Mobile stacked layout */}
       <div className="md:hidden">
-        <div className="pt-28 pb-10 px-6 text-center bg-background">
-          <h1 className="font-display text-primary text-balance text-[40px] font-bold leading-[1.05] tracking-tight animate-fade-in-slow">
-            Rooted in Nature,<br />
-            Committed to Purity.
-          </h1>
-          <div className="mt-6 mx-auto h-[3px] w-24 bg-accent animate-fade-in-slow [animation-delay:120ms]" />
-          <p className="mt-6 mx-auto max-w-sm text-primary/80 text-base leading-relaxed animate-fade-in-slow [animation-delay:200ms]">
-            From our farms to your homes, we bring you pure, natural and sustainable goodness you can trust.
-          </p>
-          <div className="mt-8 animate-fade-in-slow [animation-delay:320ms]">
-            <Button asChild size="lg" variant="default" className="px-8 tracking-[0.18em] text-[12px] font-semibold">
-              <a href="#solutions">EXPLORE MORE</a>
-            </Button>
+        <div className="relative">
+          <img
+            src={heroImg}
+            alt="Vintage farm at sunset with green barn, golden sun, cow and chickens"
+            className="absolute inset-0 w-full h-full object-cover object-[80%_center]"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-background via-background/85 to-background/10" />
+          <div className="relative pt-28 pb-[360px] px-6 text-center">
+            <h1 className="font-display text-primary text-balance text-[40px] font-bold leading-[1.05] tracking-tight animate-fade-in-slow">
+              Rooted in Nature,<br />
+              Committed to Purity.
+            </h1>
+            <div className="mt-6 mx-auto h-[3px] w-24 bg-accent animate-fade-in-slow [animation-delay:120ms]" />
+            <p className="mt-6 mx-auto max-w-sm text-primary/85 text-base leading-relaxed animate-fade-in-slow [animation-delay:200ms]">
+              From our farms to your homes, we bring you pure, natural and sustainable goodness you can trust.
+            </p>
+            <div className="mt-8 animate-fade-in-slow [animation-delay:320ms]">
+              <Button asChild size="lg" variant="default" className="px-8 tracking-[0.18em] text-[12px] font-semibold">
+                <a href="#solutions">EXPLORE MORE</a>
+              </Button>
+            </div>
           </div>
         </div>
-        <img
-          src={heroImg}
-          alt="Vintage farm at sunset with green barn, golden sun, cow and chickens"
-          className="w-full h-[420px] object-cover object-[80%_center]"
-        />
         <div className="bg-primary text-primary-foreground">
           <div className="px-6 py-8">
             <div className="grid grid-cols-2 gap-y-8 gap-x-4">
