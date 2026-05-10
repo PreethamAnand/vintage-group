@@ -13,44 +13,45 @@ const FEATURES = [
 export const Hero = () => {
   return (
     <section id="home" className="relative bg-background overflow-hidden">
-      {/* Mobile stacked layout */}
-      <div className="md:hidden">
-        <div className="bg-background pt-10 pb-8 px-6 text-center">
-          <h1 className="font-display text-primary text-balance text-[40px] font-bold leading-[1.05] tracking-tight animate-fade-in-slow">
+      {/* Mobile image-backed hero */}
+      <div className="relative md:hidden h-[100svh] min-h-[640px] overflow-hidden bg-background">
+        <img
+          src={heroImg}
+          alt="Vintage farm at sunset with green barn, golden sun, cow and chickens"
+          className="absolute inset-0 h-full w-full object-fill"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/95 via-background/65 to-background/5" />
+
+        <div className="relative z-10 px-6 pt-24 text-center">
+          <h1 className="font-display text-primary text-balance text-[36px] font-bold leading-[1.04] tracking-tight animate-fade-in-slow">
             Rooted in Nature,<br />
             Committed to Purity.
           </h1>
-          <div className="mt-6 mx-auto h-[3px] w-24 bg-accent animate-fade-in-slow [animation-delay:120ms]" />
-          <p className="mt-6 mx-auto max-w-sm text-primary/85 text-base leading-relaxed animate-fade-in-slow [animation-delay:200ms]">
+          <div className="mt-5 mx-auto h-[3px] w-24 bg-accent animate-fade-in-slow [animation-delay:120ms]" />
+          <p className="mt-5 mx-auto max-w-[330px] text-primary/85 text-[15px] leading-relaxed animate-fade-in-slow [animation-delay:200ms]">
             From our farms to your homes, we bring you pure, natural and sustainable goodness you can trust.
           </p>
-          <div className="mt-8 animate-fade-in-slow [animation-delay:320ms]">
-            <Button asChild size="lg" variant="default" className="px-8 tracking-[0.18em] text-[12px] font-semibold">
+          <div className="mt-7 animate-fade-in-slow [animation-delay:320ms]">
+            <Button asChild size="lg" variant="default" className="h-12 px-8 tracking-[0.18em] text-[12px] font-semibold">
               <a href="#solutions">EXPLORE MORE</a>
             </Button>
           </div>
         </div>
-        <div className="w-full">
-          <img
-            src={heroImg}
-            alt="Vintage farm at sunset with green barn, golden sun, cow and chickens"
-            className="w-full h-auto object-contain"
-          />
-        </div>
-        <div className="bg-primary text-primary-foreground">
-          <div className="px-6 py-8">
-            <div className="grid grid-cols-2 gap-y-8 gap-x-4">
+
+        <div className="absolute inset-x-0 bottom-0 z-10 bg-primary text-primary-foreground">
+          <div className="px-5 py-4">
+            <div className="grid grid-cols-2 gap-y-4 gap-x-3">
               {FEATURES.map((f) => {
                 const Icon = f.icon;
                 return (
-                  <div key={f.title} className="flex flex-col items-center text-center px-2">
-                    <div className="size-12 rounded-full border-2 border-accent flex items-center justify-center text-accent">
-                      <Icon size={20} strokeWidth={1.8} />
+                  <div key={f.title} className="flex flex-col items-center text-center px-1">
+                    <div className="size-9 rounded-full border-2 border-accent flex items-center justify-center text-accent">
+                      <Icon size={15} strokeWidth={1.8} />
                     </div>
-                    <h3 className="mt-3 text-accent font-display text-[13px] font-bold tracking-[0.22em]">
+                    <h3 className="mt-2 text-accent font-display text-[11px] font-bold tracking-[0.2em]">
                       {f.title}
                     </h3>
-                    <p className="mt-1 text-[12px] text-primary-foreground/85 leading-snug max-w-[180px]">
+                    <p className="mt-1 text-[10px] text-primary-foreground/85 leading-snug max-w-[150px]">
                       {f.desc}
                     </p>
                   </div>
