@@ -19,20 +19,20 @@ export const Hero = () => {
           <img
             src={heroImg}
             alt="Vintage farm at sunset with green barn, golden sun, cow and chickens"
-            className="absolute inset-x-0 bottom-0 h-auto w-full object-contain"
+            className="absolute inset-0 h-full w-full object-fill"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-background/95 via-background/70 to-background/0" />
+          <div className="absolute inset-0 bg-gradient-to-b from-background/90 via-background/48 to-background/0" />
 
-        <div className="relative z-10 px-6 pt-22 text-center">
-          <h1 className="font-display text-primary text-balance text-[34px] font-bold leading-[1.04] tracking-tight animate-fade-in-slow min-[390px]:text-[36px]">
+        <div className="relative z-10 px-6 pt-24 text-center">
+          <h1 className="font-display text-primary text-balance text-[33px] font-bold leading-[1.04] tracking-tight animate-fade-in-slow min-[390px]:text-[35px]">
             Rooted in Nature,<br />
             Committed to Purity.
           </h1>
           <div className="mt-5 mx-auto h-[3px] w-24 bg-accent animate-fade-in-slow [animation-delay:120ms]" />
-          <p className="mt-5 mx-auto max-w-[330px] text-primary/85 text-[15px] leading-relaxed animate-fade-in-slow [animation-delay:200ms]">
+          <p className="mt-5 mx-auto max-w-[330px] text-primary/85 text-[14px] leading-relaxed animate-fade-in-slow [animation-delay:200ms] min-[390px]:text-[15px]">
             From our farms to your homes, we bring you pure, natural and sustainable goodness you can trust.
           </p>
-          <div className="mt-7 animate-fade-in-slow [animation-delay:320ms]">
+          <div className="mt-6 animate-fade-in-slow [animation-delay:320ms]">
             <Button asChild size="lg" variant="default" className="h-12 px-8 tracking-[0.18em] text-[12px] font-semibold">
               <a href="#solutions">EXPLORE MORE</a>
             </Button>
@@ -41,7 +41,7 @@ export const Hero = () => {
         </div>
 
         <div className="relative z-10 shrink-0 bg-primary text-primary-foreground">
-          <div className="px-3 py-3">
+          <div className="px-3 py-3 pb-[calc(0.75rem+env(safe-area-inset-bottom))]">
             <div className="grid grid-cols-5 gap-x-1">
               {FEATURES.map((f) => {
                 const Icon = f.icon;
