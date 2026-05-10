@@ -19,9 +19,9 @@ export const Hero = () => {
           <img
             src={heroImg}
             alt="Vintage farm at sunset with green barn, golden sun, cow and chickens"
-            className="absolute inset-0 h-full w-full object-fill"
+            className="absolute inset-0 h-full w-full object-cover object-bottom"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-background/90 via-background/48 to-background/0" />
+          <div className="absolute inset-0 bg-gradient-to-b from-background via-background/70 via-40% to-background/0 to-65%" />
 
         <div className="relative z-10 px-6 pt-24 text-center">
           <h1 className="font-display text-primary text-balance text-[33px] font-bold leading-[1.04] tracking-tight animate-fade-in-slow min-[390px]:text-[35px]">
@@ -41,16 +41,16 @@ export const Hero = () => {
         </div>
 
         <div className="relative z-10 shrink-0 bg-primary text-primary-foreground">
-          <div className="px-3 py-3 pb-[calc(0.75rem+env(safe-area-inset-bottom))]">
-            <div className="grid grid-cols-5 gap-x-1">
+          <div className="px-2 py-3 pb-[calc(0.75rem+env(safe-area-inset-bottom))]">
+            <div className="grid grid-cols-5 gap-x-0">
               {FEATURES.map((f) => {
                 const Icon = f.icon;
                 return (
-                  <div key={f.title} className="flex flex-col items-center text-center px-0.5">
-                    <div className="size-8 rounded-full border-2 border-accent flex items-center justify-center text-accent">
-                      <Icon size={14} strokeWidth={1.8} />
+                  <div key={f.title} className="flex flex-col items-center justify-start text-center">
+                    <div className="size-9 rounded-full border-2 border-accent flex items-center justify-center text-accent">
+                      <Icon size={15} strokeWidth={1.8} />
                     </div>
-                    <h3 className="mt-2 text-accent font-display text-[8px] font-bold tracking-[0.16em]">
+                    <h3 className="mt-1.5 text-accent font-display text-[9px] font-bold tracking-[0.14em] leading-none">
                       {f.title}
                     </h3>
                   </div>
