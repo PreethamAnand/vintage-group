@@ -1,4 +1,4 @@
-import { Sprout, Cpu, Building2, Sun, Milk, ArrowUpRight } from "lucide-react";
+import { Sprout, Cpu, Building2, Sun, TrendingUp, ArrowUpRight } from "lucide-react";
 
 const SECTORS = [
   {
