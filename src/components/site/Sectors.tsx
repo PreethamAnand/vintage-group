@@ -1,4 +1,4 @@
-import { Sprout, Cpu, Building2, Sun, Milk, ArrowUpRight } from "lucide-react";
+import { Sprout, Cpu, Building2, Sun, TrendingUp, ArrowUpRight } from "lucide-react";
 
 const SECTORS = [
   {
@@ -22,9 +22,9 @@ const SECTORS = [
     desc: "Solar, wind, and hybrid renewable systems that decarbonize operations and accelerate the energy transition.",
   },
   {
-    icon: Milk,
-    title: "Dairy",
-    desc: "End-to-end dairy value chain optimization — from farm management to processing and distribution excellence.",
+    icon: TrendingUp,
+    title: "Finance & Investment",
+    desc: "Strategic capital allocation and investment advisory that drives sustainable growth, value creation, and long-term prosperity.",
   },
 ];
 
