@@ -1,7 +1,15 @@
-import { Linkedin, Twitter, Instagram, ArrowRight, Mail, MapPin, Phone } from "lucide-react";
+import { ArrowRight, Facebook, Linkedin, Mail, MapPin, Phone, Twitter, Youtube } from "lucide-react";
 import { Logo } from "./Logo";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
+
+const SOCIAL_LINKS = [
+  { label: "Threads", href: "https://www.threads.net/@vintagegroup.in", icon: "threads" },
+  { label: "X", href: "https://x.com/Vintagegroup_", icon: Twitter },
+  { label: "YouTube", href: "https://youtube.com/@Vintagegroupindia?si=Y9L0CyyxecYjIwm-", icon: Youtube },
+  { label: "Facebook", href: "https://www.facebook.com/profile.php?id=100092286392831&mibextid=rS40aB7S9Ucbxw6v", icon: Facebook },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/vintage-group-665a4a332?utm_source=share_via&utm_content=profile&utm_medium=member_android", icon: Linkedin },
+];
 
 const INSIGHTS = [
   { tag: "Energy", title: "Hybrid solar farms reach grid parity in three new states" },
@@ -61,15 +69,21 @@ export const Footer = () => {
               Vintage is an integrated solutions group operating across agriculture, agrotech, infrastructure, green energy,
               and dairy — building sustainable ecosystems for future generations.
             </p>
-            <div className="mt-6 flex items-center gap-2">
-              {[Linkedin, Twitter, Instagram].map((Icon, i) => (
+            <div className="mt-6 flex flex-wrap items-center gap-2">
+              {SOCIAL_LINKS.map((social) => (
                 <a
-                  key={i}
-                  href="#"
+                  key={social.label}
+                  href={social.href}
+                  target="_blank"
+                  rel="noreferrer"
                   className="size-9 inline-flex items-center justify-center rounded-md border border-charcoal-foreground/15 text-charcoal-foreground/70 hover:text-accent hover:border-accent/50 hover:bg-accent/5 transition-colors"
-                  aria-label="social"
+                  aria-label={social.label}
                 >
-                  <Icon size={15} />
+                  {social.icon === "threads" ? (
+                    <span className="text-[12px] font-semibold leading-none">T</span>
+                  ) : (
+                    <social.icon size={15} />
+                  )}
                 </a>
               ))}
             </div>
