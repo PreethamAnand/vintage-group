@@ -1,6 +1,8 @@
 import { Leaf, Sprout, Milk, HandHeart, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 import heroImg from "@/assets/hero.jpg";
+import mobileBg from "@/assets/mobile.png";
 
 const FEATURES = [
   { icon: Leaf, title: "NATURAL", desc: "Pure and natural products" },
@@ -13,49 +15,85 @@ const FEATURES = [
 export const Hero = () => {
   return (
     <section id="home" className="relative bg-background overflow-hidden">
-      {/* Mobile image-backed hero */}
-      <div className="md:hidden flex h-[100svh] min-h-[568px] flex-col overflow-hidden bg-background">
-        <div className="relative flex-1 min-h-0 overflow-hidden">
-          <img
-            src={heroImg}
-            alt="Vintage farm at sunset with green barn, golden sun, cow and chickens"
-            className="absolute inset-0 h-full w-full object-cover object-bottom"
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-background via-background/70 via-40% to-background/0 to-65%" />
-
-        <div className="relative z-10 px-6 pt-24 text-center">
-          <h1 className="font-display text-primary text-balance text-[33px] font-bold leading-[1.04] tracking-tight animate-fade-in-slow min-[390px]:text-[35px]">
-            Rooted in Nature,<br />
-            Committed to Purity.
-          </h1>
-          <div className="mt-5 mx-auto h-[3px] w-24 bg-accent animate-fade-in-slow [animation-delay:120ms]" />
-          <p className="mt-5 mx-auto max-w-[330px] text-primary/85 text-[14px] leading-relaxed animate-fade-in-slow [animation-delay:200ms] min-[390px]:text-[15px]">
-            From our farms to your homes, we bring you pure, natural and sustainable goodness you can trust.
-          </p>
-          <div className="mt-6 animate-fade-in-slow [animation-delay:320ms]">
-            <Button asChild size="lg" variant="default" className="h-12 px-8 tracking-[0.18em] text-[12px] font-semibold">
-              <a href="#solutions">EXPLORE MORE</a>
-            </Button>
+      {/* Mobile hero scene */}
+      <div className="md:hidden min-h-[100svh] flex flex-col overflow-hidden bg-[linear-gradient(180deg,#f6edd6_0%,#f4e5bf_54%,#f0deb6_100%)]">
+        <div className="flex flex-1 flex-col">
+          <div className="flex-1 flex flex-col items-center justify-center px-6 pt-24 pb-8 text-center">
+            <h1 className="font-display text-primary text-balance text-[33px] font-bold leading-[1.08] tracking-tight animate-fade-in-slow min-[390px]:text-[36px]">
+              Rooted in Nature,
+              <br />
+              Committed to Purity.
+            </h1>
+            <div className="mt-5 h-[3px] w-20 bg-accent animate-fade-in-slow [animation-delay:120ms]" />
+            <p className="mt-6 max-w-[315px] text-primary/85 text-[15px] leading-[1.55] animate-fade-in-slow [animation-delay:200ms]">
+              From our farms to your homes, we bring you pure, natural and sustainable goodness you can trust.
+            </p>
+            <div className="mt-7 animate-fade-in-slow [animation-delay:320ms]">
+              <Button asChild size="lg" variant="hero" className="h-14 min-w-[240px] rounded-2xl px-8 text-[12px] font-semibold tracking-[0.18em] shadow-elevated">
+                <a href="#solutions">EXPLORE MORE</a>
+              </Button>
+            </div>
           </div>
-        </div>
-        </div>
 
-        <div className="relative z-10 shrink-0 bg-primary text-primary-foreground">
-          <div className="px-2 py-3 pb-[calc(0.75rem+env(safe-area-inset-bottom))]">
-            <div className="grid grid-cols-5 gap-x-0">
-              {FEATURES.map((f) => {
-                const Icon = f.icon;
-                return (
-                  <div key={f.title} className="flex flex-col items-center justify-start text-center">
-                    <div className="size-9 rounded-full border-2 border-accent flex items-center justify-center text-accent">
-                      <Icon size={15} strokeWidth={1.8} />
+          <div className="relative h-[33svh] min-h-[252px] overflow-hidden bg-[#f3e3bc]">
+            <img
+              src={mobileBg}
+              alt="Vintage farm at sunset with green barn, golden sun, cow and chickens"
+              className="absolute inset-0 h-full w-full object-cover object-[50%_56%]"
+            />
+          </div>
+
+          <div className="shrink-0 bg-primary text-primary-foreground">
+            <div className="px-4 pt-5 pb-[calc(1.1rem+env(safe-area-inset-bottom))]">
+              <div className="grid grid-cols-3 gap-x-2 gap-y-6">
+                {FEATURES.slice(0, 3).map((f, index) => {
+                  const Icon = f.icon;
+                  return (
+                    <div
+                      key={f.title}
+                      className={cn(
+                        "flex flex-col items-center text-center px-2",
+                        index < 2 && "border-r border-accent/35"
+                      )}
+                    >
+                      <div className="size-12 rounded-full border-2 border-accent flex items-center justify-center text-accent">
+                        <Icon size={19} strokeWidth={1.7} />
+                      </div>
+                      <h3 className="mt-3 text-accent font-display text-[13px] font-bold tracking-[0.16em]">
+                        {f.title}
+                      </h3>
+                      <p className="mt-2 text-[12px] leading-snug text-primary-foreground/90">
+                        {f.desc}
+                      </p>
                     </div>
-                    <h3 className="mt-1.5 text-accent font-display text-[9px] font-bold tracking-[0.14em] leading-none">
-                      {f.title}
-                    </h3>
-                  </div>
-                );
-              })}
+                  );
+                })}
+              </div>
+
+              <div className="mt-6 grid grid-cols-2 gap-0 border-t border-accent/35 pt-6">
+                {FEATURES.slice(3).map((f, index) => {
+                  const Icon = f.icon;
+                  return (
+                    <div
+                      key={f.title}
+                      className={cn(
+                        "flex flex-col items-center text-center px-2",
+                        index === 0 && "border-r border-accent/35"
+                      )}
+                    >
+                      <div className="size-12 rounded-full border-2 border-accent flex items-center justify-center text-accent">
+                        <Icon size={19} strokeWidth={1.7} />
+                      </div>
+                      <h3 className="mt-3 text-accent font-display text-[13px] font-bold tracking-[0.16em]">
+                        {f.title}
+                      </h3>
+                      <p className="mt-2 text-[12px] leading-snug text-primary-foreground/90 max-w-[150px]">
+                        {f.desc}
+                      </p>
+                    </div>
+                  );
+                })}
+              </div>
             </div>
           </div>
         </div>

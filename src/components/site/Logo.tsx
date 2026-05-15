@@ -3,9 +3,11 @@ import logoSrc from "@/assets/logo.png";
 
 export const Logo = ({
   className,
+  imageClassName,
   variant = "default",
 }: {
   className?: string;
+  imageClassName?: string;
   variant?: "default" | "light";
 }) => {
   return (
@@ -15,6 +17,7 @@ export const Logo = ({
         alt="Vintage — Absolutely Pure"
         className={cn(
           "h-16 md:h-20 w-auto object-contain",
+          imageClassName,
           variant === "light" && "brightness-0 invert"
         )}
       />
