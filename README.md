@@ -2,10 +2,13 @@
 
 Future Forward Ventures is a responsive single-page marketing website for Vintage Group. The current build presents the group as a multi-sector organization focused on agriculture, agrotech, infrastructure, green energy, finance, and dairy, with a polished landing page, animated sections, and direct contact details.
 
+The latest work focuses on the mobile experience: the hero section is tuned for a single-screen first view, the mobile layout uses a dedicated background asset, and the desktop presentation remains unchanged.
+
 ## What is currently in the project
 
 - A fixed header with desktop navigation and a mobile menu.
 - A full-screen hero section with brand messaging and feature highlights.
+- A mobile-first hero treatment with a centered logo, sunrise-toned background, and a dedicated mobile background image.
 - A sectors section that introduces the main business areas.
 - A capabilities section that summarizes operational strengths.
 - An impact / metrics section with animated counters.
@@ -38,6 +41,7 @@ The project is currently in a presentable front-end state:
 
 - The core landing page flow is implemented.
 - The design system and layout are already in place.
+- Mobile hero styling has been refined to better match the current brand reference.
 - The site is content-driven rather than data-driven at this stage.
 - Navigation anchors currently point to the one-page sections on the homepage.
 - The footer includes placeholder insight items and social links that can be connected to live content later.
